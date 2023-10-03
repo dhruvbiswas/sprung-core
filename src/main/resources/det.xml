@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<detection-report>
+    <detection-method>STARGate</detection-method>
+    <filelist>
+        <file>
+            <pathname encoding="quoted-printable">=2fvar=2fqmail=2fqueue=2fmess2=2f8=2f25857712</pathname>
+            <size>810248</size>
+            <mimetype>application/mime</mimetype>
+            <md5>2e37d9d0e36dbc400761337d60bad67c</md5>
+            <sha256>4993c5a2d47e494994d704186a75aadaca16c68400f4c8e97581fabf960e25db</sha256>
+            <filelist>
+                <file>
+                    <name encoding="quoted-printable">Unknown00000784.data</name>
+                    <size>0</size>
+                    <mimetype>unknown/unknown</mimetype>
+                </file>
+                <file>
+                    <name encoding="quoted-printable">Unknown00000809.data</name>
+                    <size>1245</size>
+                    <mimetype>text/plain</mimetype>
+                    <uris>
+                        <uri>
+                            <link encoding="quoted-printable">http=3a=2f=2fwww.aseansec.org=2f</link>
+                        </uri>
+                    </uris>
+                </file>
+                <file>
+                    <name encoding="quoted-printable">Unknown00000D7A.data</name>
+                    <size>2734</size>
+                    <mimetype>text/plain</mimetype>
+                    <uris>
+                        <uri>
+                            <link encoding="quoted-printable">http=3a=2f=2fwww.aseansec.org=2f</link>
+                        </uri>
+                        <uri>
+                            <link encoding="quoted-printable">mailto=3atatik=40aseansec.org</link>
+                        </uri>
+                    </uris>
+                </file>
+                <file>
+                    <name encoding="quoted-printable">Letter=20to=20SOMTC.pdf</name>
+                    <size>183306</size>
+                    <mimetype>application/pdf</mimetype>
+                </file>
+                <file>
+                    <name encoding="quoted-printable">Aust_=20comments_=20on_=20wk_=20program.doc</name>
+                    <size>96103</size>
+                    <mimetype>application/msword</mimetype>
+                    <md5>c76f48160cb3f7212091513d969030b7</md5>
+                    <sha256>2b8dced13d0101435459f8215f48cace5b063314025ab9d8ea98d9dfa1cb0009</sha256>
+                    <malware-name>Bloodhound.Exploit.414</malware-name>
+                    <malware-category>virus</malware-category>
+                    <detection-level>known_bad</detection-level>
+                    <filelist>
+                        <file>
+                            <name encoding="quoted-printable">Data</name>
+                            <size>4096</size>
+                            <mimetype>unknown/unknown</mimetype>
+                        </file>
+                        <file>
+                            <name encoding="quoted-printable">1Table</name>
+                            <size>4096</size>
+                            <mimetype>unknown/unknown</mimetype>
+                        </file>
+                        <file>
+                            <name encoding="quoted-printable">WordDocument</name>
+                            <size>4146</size>
+                            <mimetype>unknown/unknown</mimetype>
+                        </file>
+                        <file>
+                            <name encoding="quoted-printable">=05SummaryInformation</name>
+                            <size>4096</size>
+                            <mimetype>unknown/unknown</mimetype>
+                        </file>
+                        <file>
+                            <name encoding="quoted-printable">=05DocumentSummaryInformation</name>
+                            <size>4096</size>
+                            <mimetype>unknown/unknown</mimetype>
+                        </file>
+                        <file>
+                            <name encoding="quoted-printable">=01CompObj</name>
+                            <size>102</size>
+                            <mimetype>unknown/unknown</mimetype>
+                        </file>
+                    </filelist>
+                </file>
+                <file>
+                    <name encoding="quoted-printable">Letter_=20MS_=20to_=20ASEAN_=20Sec.doc</name>
+                    <size>172315</size>
+                    <mimetype>application/msword</mimetype>
+                    <md5>c74227ee3ea0531e864d86b4bec2d9bc</md5>
+                    <sha256>d27e4364d68db638e1e4dbfa5754a20023a34358fc3e443d9f5b4966565146d9</sha256>
+                    <malware-name>Bloodhound.Exploit.414</malware-name>
+                    <malware-category>virus</malware-category>
+                    <detection-level>known_bad</detection-level>
+                    <filelist>
+                        <file>
+                            <name encoding="quoted-printable">Data</name>
+                            <size>4096</size>
+                            <mimetype>unknown/unknown</mimetype>
+                        </file>
+                        <file>
+                            <name encoding="quoted-printable">1Table</name>
+                            <size>4096</size>
+                            <mimetype>unknown/unknown</mimetype>
+                        </file>
+                        <file>
+                            <name encoding="quoted-printable">WordDocument</name>
+                            <size>4146</size>
+                            <mimetype>unknown/unknown</mimetype>
+                        </file>
+                        <file>
+                            <name encoding="quoted-printable">=05SummaryInformation</name>
+                            <size>4096</size>
+                            <mimetype>unknown/unknown</mimetype>
+                        </file>
+                        <file>
+                            <name encoding="quoted-printable">=05DocumentSummaryInformation</name>
+                            <size>4096</size>
+                            <mimetype>unknown/unknown</mimetype>
+                        </file>
+                        <file>
+                            <name encoding="quoted-printable">=01CompObj</name>
+                            <size>102</size>
+                            <mimetype>unknown/unknown</mimetype>
+                        </file>
+                    </filelist>
+                </file>
+                <file>
+                    <name encoding="quoted-printable">Work_=20Program_=20revised.doc</name>
+                    <size>142580</size>
+                    <mimetype>application/msword</mimetype>
+                    <md5>c7c3930e8f1e09c211d2ec87ea2a6e0d</md5>
+                    <sha256>74300b323b7b6a888be093f382491d43d2b56021773ded5b7aaa73e249d723aa</sha256>
+                    <malware-name>Bloodhound.Exploit.414</malware-name>
+                    <malware-category>virus</malware-category>
+                    <detection-level>known_bad</detection-level>
+                    <filelist>
+                        <file>
+                            <name encoding="quoted-printable">Data</name>
+                            <size>4096</size>
+                            <mimetype>unknown/unknown</mimetype>
+                        </file>
+                        <file>
+                            <name encoding="quoted-printable">1Table</name>
+                            <size>4096</size>
+                            <mimetype>unknown/unknown</mimetype>
+                        </file>
+                        <file>
+                            <name encoding="quoted-printable">WordDocument</name>
+                            <size>4146</size>
+                            <mimetype>unknown/unknown</mimetype>
+                        </file>
+                        <file>
+                            <name encoding="quoted-printable">=05SummaryInformation</name>
+                            <size>4096</size>
+                            <mimetype>unknown/unknown</mimetype>
+                        </file>
+                        <file>
+                            <name encoding="quoted-printable">=05DocumentSummaryInformation</name>
+                            <size>4096</size>
+                            <mimetype>unknown/unknown</mimetype>
+                        </file>
+                        <file>
+                            <name encoding="quoted-printable">=01CompObj</name>
+                            <size>102</size>
+                            <mimetype>unknown/unknown</mimetype>
+                        </file>
+                    </filelist>
+                </file>
+            </filelist>
+        </file>
+    </filelist>
+    <reason>Malware</reason>
+</detection-report>

@@ -1,0 +1,18 @@
+{
+  "ts": "1655228341",
+  "bloc_sh_rules_mapping": [
+    {
+      "bloc_rule_id": "508093144",
+      "sh_rules": [
+        {
+          "sh_rule_id": "232158762",
+          "description": "__CN_DOMAIN"
+        },
+        {
+          "sh_rule_id": "232519848",
+          "description": "__AMITK_ESGSUGG_19805_LANG_JA_PHISH_URL_USING_CN_111021_1_PART_1"
+        }
+      ]
+    }
+  ]
+}
