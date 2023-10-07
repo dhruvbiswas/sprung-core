@@ -22,5 +22,6 @@ public interface Constants {
     public static final String SPRUNG_COMPONENT_ANNOTATION = "com.sprung.core.annotations.SprungComponent";
     public static final String SPRUNG_COMPONENT_AUTOWIRED_ANNOTATION = "com.sprung.core.annotations.AutoWired";
     public static final String SPRUNG_COMPONENT_CONFIGURATION = "com.sprung.core.annotations.Configuration";
+    public static final String SPRUNG_COMPONENT_VALUE = "com.sprung.core.annotations.Value";
 
 }

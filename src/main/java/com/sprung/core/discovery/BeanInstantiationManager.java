@@ -27,7 +27,7 @@ public class BeanInstantiationManager {
             if (fieldAnnotations != null && fieldAnnotations.length > 0) {
                 // Check if we have an auto-wired field annotation
                 for (int j = 0; j < fieldAnnotations.length; j++) {
-                    // Handle autowired annotation
+                    // @autowired annotation
                     if (fieldAnnotations[j].annotationType().getName().
                             equals(Constants.SPRUNG_COMPONENT_AUTOWIRED_ANNOTATION)) {
                         // Check if the annotation has an isMandatory
@@ -52,15 +52,12 @@ public class BeanInstantiationManager {
                             f.set(o, fieldObject);
                         }
                     } else if(fieldAnnotations[j].annotationType().getName().
-                            equals(Constants.SPRUNG_COMPONENT_CONFIGURATION)){
-                        // Handle configuration annotation
-                        // This is also a Sprung bean and we add this bean into
-                        // the container map
+                            equals(Constants.SPRUNG_COMPONENT_VALUE)){
+                        // Handle @value annotation on a field
                         Annotation fieldAnnotation = fieldAnnotations[j];
-                        Class fieldClassName = f.getType();
-                        Object fieldObject = null;
-                        // The field has been annotated as @configuration
-                        // Read the field property and initialize its value
+                        String value = (String)fieldAnnotation.annotationType().getMethod("value").invoke(fieldAnnotation);
+                        f.setAccessible(true);
+                        f.set(o, value);
                     }
                 }
             }
