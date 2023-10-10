@@ -1,5 +1,7 @@
 package com.sprung.core.discovery;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
 
@@ -18,8 +20,16 @@ public class ClassInterfaceResolver {
         }
     }
 
-    public boolean isImplementing(String classname) {
+    public boolean hasImplemented(String classname) {
         return this.implementedInterfacesMap.containsKey(classname);
+    }
+
+    public List<String> getInterfaces() {
+        List<String> implementedInterfaces = new ArrayList<>();
+        implementedInterfacesMap.forEach((k, v) -> {
+            implementedInterfaces.add(k);
+        });
+        return implementedInterfaces;
     }
 
     public int getNumImplementedInterfaces() {

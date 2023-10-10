@@ -32,5 +32,6 @@ public interface Constants {
 
     // Bean lifecycle method names
     public static final String INITIALIZING_BEAN_AFTER_PROPERTIES_METHOD_NAME = "afterPropertiesSet";
+    public static final String DISPOSABLE_BEAN_DESTROY_METHOD_NAME = "destroy";
 
 }

@@ -3,6 +3,15 @@ package com.sprung.core.container;
 import java.util.HashMap;
 import java.util.Map;
 
+// TODO: this should be re-factored
+// Currently the Container does not support a good DS
+// that holds bean object mappings
+// The container should support tuple based querying instead
+// of having a flat map of objects
+// The objects in the container should be queryable based on
+// what object is a component, what object is a bean, what object
+// is a config. It should support an object graph as well as
+// separate maps for each of these object types
 public enum SprungContainer {
 
     SPRUNG_CONTAINER;
@@ -33,6 +42,14 @@ public enum SprungContainer {
 
     public synchronized Object getObject(String classname) {
         return SprungContainer.SPRUNG_CONTAINER.classNameToObjectMap.get(classname);
+    }
+
+    public Map<String, Object> getClassNameToObjectMap() {
+        return classNameToObjectMap;
+    }
+
+    public void setClassNameToObjectMap(Map<String, Object> classNameToObjectMap) {
+        this.classNameToObjectMap = classNameToObjectMap;
     }
 
     public String toString() {

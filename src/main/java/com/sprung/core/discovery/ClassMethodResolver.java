@@ -1,6 +1,8 @@
 package com.sprung.core.discovery;
 
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
 
@@ -19,8 +21,16 @@ public class ClassMethodResolver {
         }
     }
 
-    public boolean isMethod(String methodName) {
+    public boolean hasmethod(String methodName) {
         return this.implementedMethodMap.containsKey(methodName);
+    }
+
+    public List<String> getMethods() {
+        List<String> implementedMethods = new ArrayList<>();
+        this.implementedMethodMap.forEach((k, v) -> {
+            implementedMethods.add(k);
+        });
+        return implementedMethods;
     }
 
     public int getNumImplementedMethods() {

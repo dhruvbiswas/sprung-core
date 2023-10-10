@@ -76,14 +76,14 @@ public class BeanInstantiationManager {
         if (classInterfaceResolver.getNumImplementedInterfaces() > 0) {
             System.out.println(classInterfaceResolver.toString());
         }
-        if (classInterfaceResolver.isImplementing(Constants.INITIALIZING_BEAN_CLASSNAME)) {
+        if (classInterfaceResolver.hasImplemented(Constants.INITIALIZING_BEAN_CLASSNAME)) {
             System.out.println("Well I got a bean that implements " + Constants.INITIALIZING_BEAN_CLASSNAME);
             // Find an after-properties set method
             ClassMethodResolver classMethodResolver = new ClassMethodResolver(cl);
             if (classMethodResolver.getNumImplementedMethods() > 0) {
                 System.out.println(classMethodResolver.toString());
-                if (classMethodResolver.isMethod(Constants.INITIALIZING_BEAN_AFTER_PROPERTIES_METHOD_NAME)) {
-                    // Invoke the bean-lifecycle method
+                if (classMethodResolver.hasmethod(Constants.INITIALIZING_BEAN_AFTER_PROPERTIES_METHOD_NAME)) {
+                    // Invoke bean-lifecycle method
                     Method beanLifecyleAfterPropertiesMethod = cl.getMethod(Constants.INITIALIZING_BEAN_AFTER_PROPERTIES_METHOD_NAME, null);
                     beanLifecyleAfterPropertiesMethod.invoke(o, null);
                 }
