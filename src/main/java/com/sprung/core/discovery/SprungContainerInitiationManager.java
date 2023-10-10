@@ -9,8 +9,10 @@ import java.util.List;
 
 public class SprungContainerInitiationManager {
 
-    // Initializes a Sprung Container by running through annotations
-    // on a class
+    // This method takes a list of flattened classes
+    // Then runs through the list of classes and checks if any class
+    // has been annotated as
+    // @Component
     public static void initializeContainer(List<String> discoveredClassList) {
         try {
             for (int i = 0; i < discoveredClassList.size(); i++) {
@@ -25,7 +27,7 @@ public class SprungContainerInitiationManager {
                     // For now we are interested in classes that have SprunComponent Annotation
                     if (cl_annotation != null &&
                             cl_annotation.annotationType().getName().equals(
-                                    Constants.SPRUNG_COMPONENT_ANNOTATION)) {
+                                    Constants.COMPONENT_ANNOTATION)) {
                         //System.out.println("Class Name: " + cl.getName());
                         // We found a class annotated as sprung component
                         SprungContainer.SPRUNG_CONTAINER.addToClassNameToClassMap(cName, cl);
