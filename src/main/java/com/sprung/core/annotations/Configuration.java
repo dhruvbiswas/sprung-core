@@ -1,30 +1,21 @@
 package com.sprung.core.annotations;
 
-import java.awt.*;
 import java.lang.annotation.*;
 
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@SprungComponent
-public @interface SprungConfiguration {
+@Component
+public @interface Configuration {
 
-    /**
-     * Explicitly specify the name of the Spring bean definition associated with the
-     * {@code @Configuration} class. If left unspecified (the common case), a bean
-     * name will be automatically generated.
-     * <p>The custom name applies only if the {@code @Configuration} class is picked
-     * up via component scanning or supplied directly to an
-     * {@link AnnotationConfigApplicationContext}. If the {@code @Configuration} class
-     * is registered as a traditional XML bean definition, the name/id of the bean
-     * element will take precedence.
-     * @return the explicit component name, if any (or empty String otherwise)
-     * @see AnnotationBeanNameGenerator
-     */
-    @AliasFor(annotation = SprungComponent.class)
+    @AliasFor(annotation = Component.class)
     String value() default "";
 
     /**
+     *
+     * Kindly Note, this method has not been implemented yet in our custom
+     * Spring like container core
+     *
      * Specify whether {@code @Bean} methods should get proxied in order to enforce
      * bean lifecycle behavior, e.g. to return shared singleton bean instances even
      * in case of direct {@code @Bean} method calls in user code. This feature

@@ -18,7 +18,7 @@ public class SprungContainerInitiationManager {
                 Class cl = Class.forName(discoveredClassList.get(i));
                 Annotation[] cl_annotations = cl.getAnnotations();
                 // Discover annotations in each class and check if
-                // the classes have been annotated as SprungComponent
+                // the classes have been annotated as Component
                 for (int j = 0; j < cl_annotations.length; j++) {
                     Annotation cl_annotation = cl_annotations[j];
                     //System.out.println("Name: " + cl_annotation.annotationType().getName());

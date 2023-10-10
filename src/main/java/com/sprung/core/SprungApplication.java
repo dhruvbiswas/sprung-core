@@ -1,6 +1,6 @@
 package com.sprung.core;
 
-import com.sprung.core.annotations.SprungComponentScan;
+import com.sprung.core.annotations.ComponentScan;
 import com.sprung.core.container.SprungContainer;
 import com.sprung.core.discovery.ClassDiscoveryManager;
 import com.sprung.core.discovery.SprungContainerInitiationManager;
@@ -13,7 +13,7 @@ import java.util.List;
 public class SprungApplication {
 
     public static void run(Class<?> clazz, String[] args) {
-        String pkgString = clazz.getAnnotation(SprungComponentScan.class).pkg();
+        String pkgString = clazz.getAnnotation(ComponentScan.class).pkg();
         // TODO: add error handling here
         try {
             System.out.println("Discovering classes under " + pkgString);
