@@ -50,6 +50,9 @@ public class BeanInstantiationManager {
                             f.setAccessible(true);
                             // Set the field 'f' in the object 'o' using dftObject
                             f.set(o, fieldObject);
+                        } else {
+                            // TODO: This should refactored
+                            System.out.println("Skip auto-wire as isMandatory attribute on @Autowired annotation was set to false");
                         }
                     } else if(fieldAnnotations[j].annotationType().getName().
                             equals(Constants.SPRUNG_COMPONENT_VALUE)){
