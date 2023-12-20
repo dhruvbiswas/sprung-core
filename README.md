@@ -8,7 +8,7 @@ Sprung-Core is an experimental Spring like Dependency Injection framework that i
   - Component
   - Autowired
   - Value
-  - Configuration (Work In Progress)
+  - Configuration (Basic Preliminary Implementation Complete)
   - PropertySource (Work In Progress)
 
 - To build sprung-core
