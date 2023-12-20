@@ -3,7 +3,7 @@ package com.di.core.lib.test;
 import com.di.core.annotations.Component;
 import com.di.core.annotations.Value;
 
-@Component
+@Component("AppClass1Bean")
 public class AppClass1 {
 
     private String className = this.getClass().getName();

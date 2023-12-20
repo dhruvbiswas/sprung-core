@@ -3,6 +3,11 @@ package com.di.core.discovery;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationTargetException;
 
+/*
+ * Default BeanID generator either uses the value passed into
+ * the annotation or uses the canonical classname of the
+ * type of the variable
+ */
 public class DefaultBeanIDGenerator implements IBeanIDGenerator {
     @Override
     public String generateBeanId(Class cl, Annotation cl_annotation) {

@@ -72,7 +72,7 @@ public class BeanInstantiationManager {
         }
         if (o != null) {
             IBeanIDGenerator beanIDGenerator = new DefaultBeanIDGenerator();
-            DIContainer.DI_CONTAINER.addToClassNameToObjectMap(
+            DIContainer.DI_CONTAINER.addToBeanIdToObjectMap(
                     beanIDGenerator.generateBeanId(cl, cl_annotation), o);
             // Execute Bean-Lifecycle methods
             // Check if the object implements InitializingBean interface

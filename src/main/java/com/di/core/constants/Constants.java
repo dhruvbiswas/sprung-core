@@ -25,6 +25,7 @@ public interface Constants {
     public static final String AUTOWIRED_ANNOTATION = CORE_ANNOTATION_PACKAGE_PREFIX + fileNameAndExtensionSeparator + "AutoWired";
     public static final String CONFIGURATION_ANNOTATION = CORE_ANNOTATION_PACKAGE_PREFIX + fileNameAndExtensionSeparator + "Configuration";
     public static final String VALUE_ANNOTATION = CORE_ANNOTATION_PACKAGE_PREFIX + fileNameAndExtensionSeparator + "Value";
+    public static final String BEAN_ANNOTATION = CORE_ANNOTATION_PACKAGE_PREFIX + fileNameAndExtensionSeparator + "Bean";
 
     // Bean Lifecycle class names
     public static final String INITIALIZING_BEAN_CLASSNAME = "com.di.core.container.InitializingBean";

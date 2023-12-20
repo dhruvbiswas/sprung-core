@@ -4,7 +4,7 @@ import com.di.core.annotations.AutoWired;
 import com.di.core.annotations.Component;
 import com.di.core.annotations.Value;
 
-@Component
+@Component("AppClass2Bean")
 public class AppClass2 {
 
     private String className = this.getClass().getName();

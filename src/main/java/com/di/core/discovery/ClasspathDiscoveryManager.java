@@ -10,6 +10,11 @@ import java.util.List;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
+/*
+ * This is work in progress, currently stuck at not being
+ * able to discover src/main/resources and src/test/resources
+ * while being run from inside the editor
+ */
 public class ClasspathDiscoveryManager {
 
     public static List<String> discover() throws IOException {

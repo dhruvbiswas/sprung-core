@@ -21,12 +21,38 @@ public class DIContainerManager {
                 String cName = discoveredClassList.get(i);
                 Class cl = Class.forName(discoveredClassList.get(i));
                 Annotation[] cl_annotations = cl.getAnnotations();
+
                 // Discover annotations in each class and check if
-                // the classes have been annotated as Component
+                // the classes have been annotated as Configuration
                 for (int j = 0; j < cl_annotations.length; j++) {
                     Annotation cl_annotation = cl_annotations[j];
-                    //System.out.println("Name: " + cl_annotation.annotationType().getName());
-                    // For now we are interested in classes that have SprunComponent Annotation
+                    // Only consider @Configuration annotation
+                    if (cl_annotation.annotationType().getName().equals(
+                            Constants.CONFIGURATION_ANNOTATION)) {
+                        // We found a class annotated as a DI Configuration
+                        // Find all methods that are annotated as @Bean
+                        // Invoke @Bean methods and initialize
+                        for (int k = 0; k < cl.getMethods().length; k++) {
+                            // Discover annotation on the method
+                            Annotation[] methodAnnotations = cl.getMethods()[k].getDeclaredAnnotations();
+                            for (int l = 0; l < methodAnnotations.length; l++) {
+                                if (methodAnnotations[l].annotationType().getName().equals(Constants.BEAN_ANNOTATION));
+                                // This method has been annotated as a Bean
+                                // Invoke the method
+                                BeanInstantiationManager.instantiateBean(cl.getMethods()[k].getReturnType(), cl_annotation);
+                            }
+                        }
+                    }
+                }
+
+                // Discover annotations in each class and check if
+                // the classes have been annotated as @Component
+                for (int j = 0; j < cl_annotations.length; j++) {
+                    Annotation cl_annotation = cl_annotations[j];
+                    // We already ran through @Configuration so we have
+                    // the initial set of Beans in Bean Factory already
+                    // For now we are interested in classes that have @Component Annotation
+                    //
                     if (cl_annotation != null &&
                             cl_annotation.annotationType().getName().equals(
                                     Constants.COMPONENT_ANNOTATION)) {
@@ -56,7 +82,7 @@ public class DIContainerManager {
     }
 
     public static void destroy() {
-        DIApplication.getDIContainer().getClassNameToObjectMap().forEach((k, v) -> {
+        DIApplication.getDIContainer().getBeanIdToObjectMap().forEach((k, v) -> {
             // For each object in the container check if the object implements
             // a Disposable bean interface, if the object implements that interface
             // call its destroy method

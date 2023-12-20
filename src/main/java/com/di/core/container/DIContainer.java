@@ -17,15 +17,15 @@ public enum DIContainer {
     DI_CONTAINER;
 
     private Map<String, Class> classNameToClassMap = new HashMap<String, Class>();
-    private Map<String, Object> classNameToObjectMap = new HashMap<String, Object>();
+    private Map<String, Object> beanIdToObjectMap = new HashMap<String, Object>();
     private Map<String, String> typeToClassNameMap = new HashMap<String, String>();
 
     public synchronized void addToClassNameToClassMap(String classname, Class clazz) {
         DIContainer.DI_CONTAINER.classNameToClassMap.put(classname, clazz);
     }
 
-    public synchronized void addToClassNameToObjectMap(String c, Object o) {
-        DIContainer.DI_CONTAINER.classNameToObjectMap.put(c, o);
+    public synchronized void addToBeanIdToObjectMap(String c, Object o) {
+        DIContainer.DI_CONTAINER.beanIdToObjectMap.put(c, o);
     }
 
     public synchronized void addToTypeToClassNameMap(String type, String c) {
@@ -33,7 +33,7 @@ public enum DIContainer {
     }
 
     public synchronized boolean hasBean(String classname) {
-        if(DIContainer.DI_CONTAINER.classNameToObjectMap.containsKey(classname)) {
+        if(DIContainer.DI_CONTAINER.beanIdToObjectMap.containsKey(classname)) {
             return true;
         } else {
             return false;
@@ -41,20 +41,20 @@ public enum DIContainer {
     }
 
     public synchronized Object getBean(String classname) {
-        return DIContainer.DI_CONTAINER.classNameToObjectMap.get(classname);
+        return DIContainer.DI_CONTAINER.beanIdToObjectMap.get(classname);
     }
 
-    public Map<String, Object> getClassNameToObjectMap() {
-        return classNameToObjectMap;
+    public Map<String, Object> getBeanIdToObjectMap() {
+        return beanIdToObjectMap;
     }
 
-    public void setClassNameToObjectMap(Map<String, Object> classNameToObjectMap) {
-        this.classNameToObjectMap = classNameToObjectMap;
+    public void setBeanIdToObjectMap(Map<String, Object> classNameToObjectMap) {
+        this.beanIdToObjectMap = classNameToObjectMap;
     }
 
     public String toString() {
         StringBuilder builder = new StringBuilder();
-        DIContainer.DI_CONTAINER.classNameToObjectMap.forEach((k, v) -> {
+        DIContainer.DI_CONTAINER.beanIdToObjectMap.forEach((k, v) -> {
             System.out.println(k + ": " + v.toString());
         });
         return builder.toString();
