@@ -13,12 +13,22 @@ import java.util.List;
 public class DIApplication {
 
     public static void run(Class<?> clazz, String[] args) {
+        // TODO: Add support to auto-discover beans even when there
+        // TODO: is no @ComponentScan annotation configured
         String pkgString = clazz.getAnnotation(ComponentScan.class).pkg();
         // TODO: add error handling here
         try {
-            System.out.println("Discovering classes under " + pkgString);
-            List<String> discoveredClassList = ClassDiscoveryManager.discover(pkgString);
-            DIContainerManager.initializeContainer(discoveredClassList);
+            if (pkgString != null && pkgString.length() > 0) {
+                // Lets split the string
+                String[] pkgs = pkgString.split(",");
+
+                for (int i = 0; i < pkgs.length; i++) {
+                    System.out.println("Discovering classes under " + pkgs[i].trim());
+                    List<String> discoveredClassList = ClassDiscoveryManager.discover(pkgs[i].trim());
+                    DIContainerManager.initializeContainer(discoveredClassList);
+                }
+
+            }
 
             // Lets keep it simple for the time being
             // Lets Create a new instance of the Class clazz

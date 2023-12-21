@@ -13,8 +13,8 @@ public class DIContainerManager {
 
     // This method takes a list of flattened classes
     // Then runs through the list of classes and checks if any class
-    // has been annotated as
-    // @Component
+    // has been Spring annotated
+    // @Component, @Configuration etc
     public static void initializeContainer(List<String> discoveredClassList) {
         try {
             for (int i = 0; i < discoveredClassList.size(); i++) {
@@ -49,8 +49,9 @@ public class DIContainerManager {
                 // the classes have been annotated as @Component
                 for (int j = 0; j < cl_annotations.length; j++) {
                     Annotation cl_annotation = cl_annotations[j];
-                    // We already ran through @Configuration so we have
-                    // the initial set of Beans in Bean Factory already
+                    // We already ran through @Configuration so if the application
+                    // has defined beans through @Configuration then those
+                    // initial set of Beans in Bean Factory has already been discovered
                     // For now we are interested in classes that have @Component Annotation
                     //
                     if (cl_annotation != null &&

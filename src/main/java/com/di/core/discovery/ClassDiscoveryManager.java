@@ -35,7 +35,6 @@ public class ClassDiscoveryManager {
                 findClasses(packageName, discoveredFile.getAbsolutePath(), classes);
             }
         } else if (file.exists() && file.isFile()) {
-            //Check if this is a jar file
             //For now lets use an extension based approach (we are only interested in .class and .jar files)
             if (file.getName().endsWith(".class")) {
                 if (packageName.equals("")) {
