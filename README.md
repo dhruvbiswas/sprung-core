@@ -15,7 +15,7 @@ The source base is an original implementation and no part of the source was copi
 The only set of files that have been picked from Spring are the actual annotation files just to be consistent
 with Spring's original annotation definitions. 
 
-- To build sprung-core
+- To build DI-Core
   - mvn clean install
 
 - Kindly visit the following file to check DI-Core Dependency Injection Framework being used in a sample application
