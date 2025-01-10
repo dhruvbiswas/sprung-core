@@ -53,7 +53,7 @@ public class Main extends CommandLineRunner {
         // TODO: Currently there is no XML support for creating bean-container
         // TODO: Only annotations are supported for DI-Autowiring
         // TODO: The key into the object factory is an FQ class
-        // TODO: There should be a proper/better-way to generate bean-ids when using
+        // TODO: Configurable way to generate bean-ids when using
         // TODO: annotation based DI-Autowiring
 
         AppClass1 appClass1 = (AppClass1) DIApplication.getDIContainer().getBean(
