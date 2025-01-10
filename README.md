@@ -23,6 +23,7 @@ with Spring's original annotation definitions.
 
 Sample usage of ComponentScan in an application
 
+```
 package com.sample.app;
 
 import com.sample.app.lib.AppClass1;
@@ -73,3 +74,4 @@ public class Main extends CommandLineRunner {
     }
 
 }
+```
